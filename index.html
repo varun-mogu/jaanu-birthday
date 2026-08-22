@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#130b18">
+<title>For Jaanu ❤️</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;padding:0;background:#09070d;color:#fff;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+body{overflow-x:hidden;-webkit-tap-highlight-color:transparent}.screen{min-height:100svh;display:none;position:relative;overflow:hidden;z-index:1}
+.screen.active{display:flex;align-items:center;justify-content:center}
+.bg{position:absolute;inset:0;background:
+ radial-gradient(circle at 20% 20%,rgba(255,91,151,.18),transparent 30%),
+ radial-gradient(circle at 80% 80%,rgba(177,95,255,.16),transparent 30%),
+ linear-gradient(145deg,#09070d,#1b0c1c 55%,#09070d);z-index:-2}
+.stars{position:absolute;inset:0;background-image:radial-gradient(#fff 1px,transparent 1px);background-size:43px 43px;opacity:.08;z-index:-1}
+.wrap{width:min(92%,520px);text-align:center;padding:30px 12px 45px}
+.kicker{letter-spacing:4px;text-transform:uppercase;font-size:11px;color:#eab7cc;margin-bottom:16px}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:700;letter-spacing:-.02em}
+h1{font-size:clamp(40px,12vw,64px);line-height:1.02;margin:8px 0 18px}
+h2{font-size:clamp(30px,8vw,42px);line-height:1.08;margin:10px 0 18px}
+p{font-family:system-ui,-apple-system,sans-serif;line-height:1.65;color:#e8dfe7}
+.btn{border:0;border-radius:999px;padding:15px 25px;background:linear-gradient(135deg,#ff5f9e,#b65cff);color:white;font-weight:700;font-size:16px;letter-spacing:.1px;box-shadow:0 10px 35px #ff4f8b33;cursor:pointer;margin-top:16px;min-height:52px;min-width:210px;position:relative;z-index:50;pointer-events:auto;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.small{font-size:12px;color:#aaa;font-family:system-ui,sans-serif}
+.heart{font-size:72px;animation:pulse 1.3s infinite;display:block;margin-bottom:12px}
+@keyframes pulse{50%{transform:scale(1.12)}}
+.balloon-area{height:55vh;position:relative;margin-top:10px}
+.balloon{position:absolute;width:64px;height:78px;border-radius:50% 50% 48% 48%;cursor:pointer;animation:float 3.2s ease-in-out infinite}
+.balloon:after{content:"";position:absolute;bottom:-31px;left:31px;width:1px;height:34px;background:#c8a9b8}
+.balloon:before{content:"";position:absolute;bottom:-5px;left:27px;border-left:5px solid transparent;border-right:5px solid transparent;border-top:8px solid currentColor}
+.balloon:nth-child(1){left:6%;top:12%;background:#ff5b8e;color:#ff5b8e}
+.balloon:nth-child(2){left:37%;top:4%;background:#b75cff;color:#b75cff;animation-delay:.4s}
+.balloon:nth-child(3){right:6%;top:15%;background:#ffb347;color:#ffb347;animation-delay:.8s}
+.balloon:nth-child(4){left:18%;top:52%;background:#55d6be;color:#55d6be;animation-delay:1.1s}
+.balloon:nth-child(5){right:18%;top:55%;background:#7e9cff;color:#7e9cff;animation-delay:1.5s}
+.balloon span{display:none}
+.balloon.popped{transform:scale(1.8);opacity:0;transition:.45s;pointer-events:none}
+.reveal{position:absolute;left:50%;top:40%;transform:translate(-50%,-50%);width:82%;padding:20px;border-radius:22px;background:#ffffff0d;border:1px solid #ffffff20;backdrop-filter:blur(12px);opacity:0;transition:.35s}
+.reveal.show{opacity:1}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:22px 0}
+.gallery img{width:100%;height:180px;object-fit:cover;border-radius:18px;box-shadow:0 12px 30px #0008}
+.gallery img:first-child{grid-column:span 2;height:255px}
+.memory{font-size:13px;margin:0 4px 10px;color:#c9b8c6;font-family:system-ui}
+.cake{font-size:105px;filter:drop-shadow(0 15px 35px #ff72b455);animation:cakefloat 2s ease-in-out infinite}
+@keyframes cakefloat{50%{transform:translateY(-8px)}}
+.candle{font-size:60px;cursor:pointer;margin:0 0 4px}
+.letter{background:#fff9f0;color:#38272e;border-radius:18px;padding:28px 23px;text-align:left;box-shadow:0 20px 50px #0008;transform:rotate(-1deg)}
+.letter h3{margin-top:0;font-size:27px}.letter p{color:#59444c;font-family:Georgia,"Times New Roman",serif;font-size:16px;line-height:1.75}
+.sig{text-align:right;font-style:italic;font-size:18px}
+.final{font-size:18px;color:#f6d9e7}.tag{display:inline-block;padding:7px 12px;border:1px solid #ffffff20;border-radius:99px;font:12px system-ui;color:#eab7cc}
+.confetti{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:20}
+.confetti i{position:absolute;width:8px;height:14px;top:-20px;animation:fall 2.8s linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}
+.music-note{position:fixed;right:16px;top:16px;z-index:30;border:1px solid #fff2;background:#ffffff12;color:#fff;border-radius:50%;width:42px;height:42px;display:none;align-items:center;justify-content:center}
+.dots{display:flex;justify-content:center;gap:6px;margin-top:22px}.dots b{width:6px;height:6px;border-radius:50%;background:#ffffff30}.dots b.on{background:#fff}
+
+/* PREMIUM POLISH */
+.wrap{position:relative;z-index:5}
+.kicker{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-weight:700}
+.btn{transition:transform .2s ease,box-shadow .2s ease;letter-spacing:.2px}
+.btn:active{transform:scale(.96)}
+.gallery{perspective:900px}
+.gallery img{transition:transform .6s ease,filter .6s ease;filter:saturate(1.03) contrast(1.02)}
+.gallery img:hover{transform:translateY(-5px) rotateX(1deg) rotateY(-1deg)}
+.premium-letter{position:relative;overflow:hidden;border:1px solid rgba(123,72,63,.16);background:
+ radial-gradient(circle at 90% 5%,rgba(255,202,213,.55),transparent 28%),
+ linear-gradient(135deg,#fffaf1,#fff4e9);box-shadow:0 25px 70px rgba(0,0,0,.42), inset 0 0 35px rgba(180,100,80,.06)}
+.premium-letter:before{content:"";position:absolute;inset:12px;border:1px solid rgba(135,82,72,.12);border-radius:12px;pointer-events:none}
+.letter-top{font-size:34px;text-align:center;margin-bottom:4px}
+.premium-letter h3{font-size:32px;text-align:center;color:#3b2930;margin:8px 0 22px}
+.premium-letter p{font-size:16px;line-height:1.78;color:#574149;letter-spacing:.05px}
+.premium-letter p b{color:#8d3c61}
+.premium-letter .sig{margin-top:25px;color:#694652}
+</style>
+</head>
+<body>
+<audio id="music" loop preload="auto">
+  <!-- Optional: put your own MP3 in the folder as music.mp3 and uncomment the source below -->
+  <!-- <source src="music.mp3" type="audio/mpeg"> -->
+</audio>
+<button class="music-note" id="musicBtn" onclick="toggleMusic()">♫</button>
+<div class="confetti" id="confetti"></div>
+
+<section class="screen active" id="s1"><div class="bg"></div><div class="stars"></div>
+ <div class="wrap">
+  <span class="heart">❤️</span><div class="kicker">A little surprise from your husband</div>
+  <h1>For my<br><em>Jaanu</em></h1>
+  <p>I made this little corner of the internet just for you.<br><b>Take your time… there is a surprise waiting. ❤️</b></p>
+  <button class="btn" type="button" id="startBtn">Open your surprise ✨</button>
+  <div class="small" style="margin-top:18px">Made with love • August 2026</div>
+  <div class="small" style="margin-top:10px;opacity:.7">Tap the button above to begin ✨</div>
+ </div>
+</section>
+
+<section class="screen" id="s2"><div class="bg"></div><div class="wrap">
+ <div class="kicker">Step 1</div><h2>Pop the balloons 🎈</h2><p>Each one has a tiny message for you. Tap them all.</p>
+ <div class="balloon-area">
+  <div class="balloon" onclick="pop(this,0)"></div><div class="balloon" onclick="pop(this,1)"></div>
+  <div class="balloon" onclick="pop(this,2)"></div><div class="balloon" onclick="pop(this,3)"></div>
+  <div class="balloon" onclick="pop(this,4)"></div>
+  <div class="reveal" id="reveal"></div>
+ </div>
+ <button class="btn" id="next2" style="display:none" onclick="go(3)">Keep going ❤️</button>
+ </div>
+</section>
+
+<section class="screen" id="s3"><div class="bg"></div><div class="wrap">
+ <div class="kicker">Our little story</div><h2>Some of my favourite memories with you</h2>
+ <div class="gallery">
+  <img src="photos/photo1.jpeg"><img src="photos/photo2.jpeg"><img src="photos/photo3.jpeg">
+  <img src="photos/photo4.jpeg"><img src="photos/photo5.jpeg"><img src="photos/photo6.jpeg">
+ </div>
+ <p class="memory">From ordinary days to beautiful places, the best part has always been having you beside me.</p>
+ <button class="btn" onclick="go(4)">One more surprise 🎂</button>
+ </div>
+</section>
+
+<section class="screen" id="s4"><div class="bg"></div><div class="wrap">
+ <div class="kicker">Step 2</div><h2>Make a wish, Jaanu</h2>
+ <div class="candle" id="candle" onclick="blow()">🕯️🕯️🕯️</div>
+ <div class="cake">🎂</div>
+ <p id="wishText">Tap the candles and make your birthday wish.</p>
+ <button class="btn" id="next4" style="display:none" onclick="go(5)">I have one last thing to say 💌</button>
+ </div>
+</section>
+
+<section class="screen" id="s5"><div class="bg"></div><div class="wrap">
+ <div class="kicker">A little letter from someone who loves you</div>
+ <div class="letter premium-letter">
+  <div class="letter-top">💌</div>
+  <h3>Dear Jaanu,</h3>
+  <p>Happy Birthday to someone truly special! 🎂</p>
+  <p>You are <b>Sweet Soul, Super Loyal, My Rock</b>, and I'm so grateful to have you in my life.</p>
+  <p>You bring so much warmth and sweetness into my life. Every moment with you is precious.</p>
+  <p>On your special day, I wish you all the happiness, love, and joy that you deserve. May this year bring you countless beautiful moments and wonderful memories.</p>
+  <p>Here's to celebrating you today and always! 🎉</p>
+  <p class="sig">With love and best wishes,<br><b>Your Special Someone 💝</b></p>
+ </div>
+ <button class="btn" type="button" onclick="go(6)">There's still one more surprise… ✨</button>
+ </div>
+</section>
+
+<section class="screen" id="s6"><div class="bg"></div><div class="stars"></div><div class="wrap">
+ <div class="heart">💖</div><div class="kicker">Final reveal</div>
+ <h1>Happy 31st<br>Birthday, Jaanu! 🎉</h1>
+ <p class="final">You thought this little website was the surprise…</p>
+ <p><span class="tag">KASHI • AUGUST 2026</span></p>
+ <p class="final"><b>But Jaanu… your real birthday surprise is waiting for you. ❤️</b></p>
+ <p>So get ready, dress up, and trust me just a little longer. 😄</p>
+ <button class="btn" onclick="celebrate()">Celebrate us ✨</button>
+ <div class="dots"><b></b><b></b><b></b><b></b><b></b><b class="on"></b></div>
+ </div>
+</section>
+
+<script>
+let popped=0;
+document.addEventListener('DOMContentLoaded',()=>{
+  const start=document.getElementById('startBtn');
+  if(start){
+    start.addEventListener('click',()=>go(2));
+    start.addEventListener('touchend',(e)=>{e.preventDefault();go(2);},{passive:false});
+  }
+});
+const msgs=[
+ "I still get a little smile when I look at you. ❤️",
+ "My favourite place is wherever we are together.",
+ "Thank you for being my partner through everything.",
+ "You gave me a beautiful family and a beautiful life.",
+ "31 looks beautiful on you, Jaanu. 😉❤️"
+];
+function go(n){
+ document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+ document.getElementById('s'+n).classList.add('active');
+ window.scrollTo({top:0,behavior:'smooth'});
+ if(n>1) document.getElementById('musicBtn').style.display='flex';
+}
+function pop(el,i){
+ if(el.classList.contains('popped'))return;
+ el.classList.add('popped');popped++;
+ const r=document.getElementById('reveal');r.textContent=msgs[i];r.classList.add('show');
+ setTimeout(()=>r.classList.remove('show'),1600);
+ if(popped===5) document.getElementById('next2').style.display='inline-block';
+}
+function blow(){
+ document.getElementById('candle').textContent='✨💨✨';
+ document.getElementById('wishText').innerHTML='<b>Wish made. ❤️</b><br>May this year bring you everything your heart quietly wishes for.';
+ document.getElementById('next4').style.display='inline-block';confetti();
+}
+function confetti(){
+ const box=document.getElementById('confetti');
+ for(let i=0;i<90;i++){
+  const x=document.createElement('i');x.style.left=Math.random()*100+'%';x.style.animationDelay=Math.random()*.7+'s';
+  x.style.transform='rotate('+Math.random()*360+'deg)';box.appendChild(x);setTimeout(()=>x.remove(),3500);
+ }
+}
+function celebrate(){confetti();setTimeout(confetti,800);setTimeout(confetti,1600)}
+function toggleMusic(){
+ const a=document.getElementById('music');
+ if(!a.src){alert('Optional: add your favourite MP3 to this website folder as music.mp3, then uncomment the source line in index.html.');return}
+ if(a.paused)a.play();else a.pause();
+}
+</script>
+</body></html>
